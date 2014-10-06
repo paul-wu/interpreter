@@ -5,13 +5,13 @@ INTRODUCTION
 This is a simple interpreter which convert markup language
 (like `Markdown`) to CSS/HTML code, we use it for blog and
  online forum typesetting. The interpreter is a bit diffe-
-rent from `Markdown` interpreter since the implements of s
-ome features are based on our own perspective. For example
+rent from `Markdown` interpreter since the implements of some
+features are based on our own perspective. For example
 , we add up a tag to reflect the font attribute, which we 
 think is necessary for blog typesetting.
 
-The whole project are writen in Javascript, we didn't ref-
-erence any other js libraries except MathJax, since to con
+The whole project are writen in Javascript, we didn't refer
+ence any other js libraries except MathJax, since to con
 vert the LaTeX formula to CSS/HTML code is not a trivial jo
 b. Most of our algorithm are recursive, since which is more
 intuitive for top-down parse method and more robust for the
