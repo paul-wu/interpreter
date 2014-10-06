@@ -10,13 +10,9 @@ features are based on our own perspective. For example
 , we add up a tag to reflect the font attribute, which we 
 think is necessary for blog typesetting.
 
-The whole project are writen in Javascript, we didn't refer
-ence any other js libraries except MathJax, since to con
-vert the LaTeX formula to CSS/HTML code is not a trivial jo
-b. Most of our algorithm are recursive, since which is more
+The whole project are writen in Javascript, we didn't reference any other js libraries except MathJax, since to convert the LaTeX formula to CSS/HTML code is not a trivial job. Most of our algorithm are recursive, since which is more
 intuitive for top-down parse method and more robust for the
-compiler.(But, one of the drawback by using recursive func-
-tion in javascript is that it may cause 'Maximum call size 
+compiler.(But, one of the drawback by using recursive function in javascript is that it may cause 'Maximum call size 
 exceed' issue when the input string been too long.)
 
 
@@ -40,8 +36,7 @@ The data flow of our interpreter are as follow:
 
 2. The compiler parse the text, and add HTML/CSS tags to the
    semantic blocks it has matched. If the compiler match a 
-   `codeblock`, it will call the `formate` function in code-
-   formate.js and get the highlighted code back. When the par
+   `codeblock`, it will call the `formate` function in codeformate.js and get the highlighted code back. When the par
    sing completed the compiler will return the HTML code as 
    a string.
 
