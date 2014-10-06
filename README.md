@@ -36,12 +36,10 @@ The data flow of our interpreter are as follow:
 
 2. The compiler parse the text, and add HTML/CSS tags to the
    semantic blocks it has matched. If the compiler match a 
-   `codeblock`, it will call the `formate` function in codeformate.js and get the highlighted code back. When the par
-   sing completed the compiler will return the HTML code as 
+   `codeblock`, it will call the `formate` function in codeformate.js and get the highlighted code back. When the parsing completed the compiler will return the HTML code as 
    a string.
 
-3. The function in API.js then will using `innerHTML` attri-
-   bute to write our result HTML code to the target place of
+3. The function in API.js then will using `innerHTML` attribute to write our result HTML code to the target place of
     the HTML page.
 
 To test the program, just open the testhtml.html in chrome or
