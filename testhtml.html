@@ -1,0 +1,103 @@
+<html>
+	<title>
+	Test the efficiency of Notepad++ for coding html
+	</title>
+	<head>
+	<style src="compile.css"></style>
+	<script src = "base64.js"></script>
+	<script src = "compile.js"></script>
+	<script src = "completion.js"></script>
+	<script src="codeformate.js"></script>
+	<!--script type="text/javascript"
+		src="MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script-->
+	<script type="text/javascript" 
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<script type="text/javascript"
+		src="jquery.min.js">
+	</script>
+	<script src="API.js"></script>
+	<script type="text/javascript">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})
+		function preview()
+		{
+			var key = event.keyCode;
+			if((key >= 37 && key <= 40)||(key >=112 && key <= 123)||(key >=91 && key <=93)||(key >=16 &&key <=20)){
+				return;
+			}
+			var checked = document.getElementById('preview').checked;
+			if(checked)run(0);
+			else
+				run(1);
+		}
+		function print(flag)
+		{
+			var input = document.getElementById('output').innerHTML;
+			//var input = compile(document.getElementById('wmd-input').value);
+			if(flag == 0)print_page(input);
+			if(flag == 1)gethtmlcode(input);
+		}
+	</script>
+	</head>
+	<body>
+	<center><b>This is test page</b></center>
+	<style type="text/css">
+		.div2{
+			
+			width:700px;height:100%;float:left;margin-left:100px;
+		}
+		.div3{
+			height:100%;float:right;
+		}
+		.codeblock{
+			LINE-HEIGHT: "100%"
+			font-size:10px;
+			padding:9px 14px;margin-bottom:14px;background-color:#f7f7f9;border:1px solid #e1e1e8;border-radius:4px
+		}
+		/*.highlight{
+			font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+			background-color:#eee;
+		}*/
+		.highlight{
+			font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+			margin: 0;
+			border: 1px solid #ddd;
+			background-color: #F8F8F8;
+			border-radius: 3px;
+			padding: 0px; 
+			font-style: normal;
+		}
+		.hightlightchinese{
+			background-color:#ECF5FF;
+		}
+	</style>
+	<div class="div1">
+	<div class="div3" id = "input">
+		<textarea id="wmd-input" class="wmd-input" name="post-text" cols="70" rows="100" tabindex="101" data-min-length="" oninput=call() onkeydown=record() onkeyup=preview()></textarea>
+		<div>
+		<button type="button" onclick = "run(1)">Show</button><button type="button" onclick = "print(0)">Print</button><button type="button" onclick = "print(1)">GetHTMLCode</button><input type="checkbox" id="preview" value="checkbox"><label for="preview">No Math Preview</label></input>
+		</div>
+	</div>
+	<div class="div2">
+	<span style="font-family: Microsoft YaHei;LINE-HEIGHT: 150%">
+		<p id="output">
+		</p>
+	</span>
+	</div>
+	</div>
+	<style type="text/css">
+		code{
+			font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+			background-color:#f7f7f9;
+		}
+		pre{
+		LINE-HEIGHT:120%;
+		font-size:15px;
+		padding:0px;font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;margin-bottom:0px;margin-top:0px; background-color:#f7f7f9;overflow:auto;width:auto;width:700px !ie7;padding-bottom:0px !ie7;max-height:600px}
+	</style>
+</html>
+	
+	
+	
+</html>
