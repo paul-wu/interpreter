@@ -1,0 +1,32 @@
+
+%%l
+---
+#定理 1：#存在两无理数 $a,b$ 使得 $a^b$ 为有理数。
+
+#证明#：我们采用反证明法，若不存在这样的 $a,b$ ,那么由 $\sqrt{2}$ 为无理数知 $\sqrt{2}^{\sqrt{2}}$ 也为无理数，记为 $\alpha$ 。进一步容易知道$\alpha^{\sqrt{2}}=2$ 为有理数，这与我们的假设矛盾！
+>>$\Box$
+ &
+
+%%
+
+__[red]~[b]~注记~~：虽然我们证明了这样的$a,b$是存在的，但我们的证明不能给出关于他们的任何信息。我们甚至不知道$\sqrt{2}^\sqrt{2}$是否为无理数，事实上由代数数论中的[林德曼-魏尔斯特拉斯定理]http://en.wikipedia.org/wiki/Lindemann%E2%80%93Weierstrass_theorem 可以证明$\sqrt{2}^\sqrt{2}$为超越数，故也为无理数。__
+
+事实上，我们有如下更简单的定理：
+> #Theorem:# If $\alpha\not=0,1$ is algebraic, $\beta$ is positive and rational, not a perfect square, then $\alpha^\sqrt{\beta}$ is transcendental.
+#定理：#如果$\alpha\not=0,1$是代数数，$\beta$是正的有理非平方数，那么$\alpha^{\sqrt{\beta}}$为超越数。
+
+证明如上定理需要一定解析技巧，我们下次再证\~\~
+
+
+[img]proofahead1.png
+---
+
+
+#引理 1：#设 $z_0=0,z_1,z_2,z_3,\cdots$ 是以模大小排列全体的Gauss整数，对任意全纯函数 $f(z)$ 我们定义其 ~Newton Series~ 为：$$f(z)=A_0+A_1P_1(z)+A_2P_2(z)+\cdots+A_nP_n(z)+R_n(z),$$其中 $P_1(z)=z$, $P_2(z)=z(z-z_1)$, $P_3(z)=z(z-z_1)(z-z_2)\cdots$。那么我们有：$$A_n=\int_{\gamma_n}\frac{f(\zeta)}{\zeta(\zeta-z_1)\cdots(\zeta-z_n)}d\zeta,$$这里$\gamma_n$为包含$z_0,z_1,\cdots,z_n$的任意闭环。
+
+#证明：#我们采用归纳法，显然$$A_0=f(z_1)=\int_{\gamma_1}\frac{f(\zeta)}{\zeta-z_1}d\zeta,$$假设对于任意 $n<l$ 均成立，我们证明 $n=l$ 时也成立。。。
+>>$\Box$
+
+__由于版面限制，我们无法在此呈现完整的证明，在[这里]http://euclid.colorado.edu/~tubbs/courses/Chapter%20Three.pdf 可以找到证明概要，以及[这里]https://proofwiki.org/wiki/Gelfond-Schneider_Theorem 找到完整证明。__
+
+
