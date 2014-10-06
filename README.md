@@ -4,8 +4,8 @@ INTRODUCTION
 
 This is a simple interpreter which convert markup language
 (like `Markdown`) to CSS/HTML code, we use it for blog and
- online forum typesetting. The interpreter is a bit diffe-
-rent from `Markdown` interpreter since the implements of some
+ online forum typesetting. The interpreter is a bit different
+ from `Markdown` interpreter since the implements of some
 features are based on our own perspective. For example
 , we add up a tag to reflect the font attribute, which we 
 think is necessary for blog typesetting.
