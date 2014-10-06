@@ -67,7 +67,7 @@ CONTACT
 =====
 
 If you are interested in this project and want to contribute to it, 
-please fork it in github.
+please fork it on github.
 
 Author: Wu Changlong
 
