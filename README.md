@@ -10,7 +10,7 @@ features are based on our own perspective. For example
 , we add up a tag to reflect the font attribute, which we 
 think is necessary for blog typesetting.
 
-The whole project are writen in Javascript, we didn't reference any other js libraries except MathJax, since to convert the LaTeX formula to CSS/HTML code is not a trivial job. Most of our algorithm are recursive, since which is more
+The whole project was writen in Javascript, we didn't reference any other js libraries except MathJax, since to convert the LaTeX formula to CSS/HTML code is not a trivial job. Most of our algorithm are recursive, since which is more
 intuitive for top-down parse method and more robust for the
 compiler.(But, one of the drawback by using recursive function in javascript is that it may cause 'Maximum call size 
 exceed' issue when the input string been too long.)
@@ -19,7 +19,7 @@ exceed' issue when the input string been too long.)
 PROJECT STRUCTURE
 =======
 
-The project have four main parts, as follow:
+The project has four main parts, as follow:
 
 1. compile.js //This is the kernel of our interpreter
 
