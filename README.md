@@ -44,7 +44,7 @@ The data flow of our interpreter are as follow:
 
 To test the program, just open the testhtml.html in chrome or
 firfox, we do not support ie since the `innerHTML` attribute
-of the elements in ie are READ ONLY. You can test at [here](http://whuosc.sinaapp.com/)
+of the elements in ie are READ ONLY. You can test at ([here](http://whuosc.sinaapp.com/))
 
 LICENCE
 =====
