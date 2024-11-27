@@ -54,24 +54,36 @@ function call()
 	changestate(key,pos);
 }
 
-function run(runlate){
-	codelist = [];
-	preid = 0;
-	var input = document.getElementById("wmd-input").value;
-	result = compile(input);
-	document.getElementById("output").innerHTML = result;
-	if(runlate)MathJax.Hub.Queue(["Typeset",MathJax.Hub,"output"]);
-	stat = 0;
-	var i = 0;
-	while(i<=getIDNum()){
-		var code = document.getElementById(i.toString());//alert(formate(code.innerText));
-		if(code){
-			stat = 1;
-			codelist.push(code.innerHTML);
-		}
-		i++;
-	}
+function run(runlate) {
+    codelist = [];
+    preid = 0;
+    var input = document.getElementById("wmd-input").value;
+    result = compile(input);
+    document.getElementById("output").innerHTML = result;
+
+    if (runlate) {
+        MathJax.typesetPromise([document.getElementById("output")])
+            .then(() => {
+                console.log("MathJax typesetting complete.");
+            })
+            .catch((err) => {
+                console.error("MathJax typesetting error:", err);
+            });
+    }
+
+    stat = 0;
+    var i = 0;
+    while (i <= getIDNum()) {
+        var code = document.getElementById(i.toString());
+        // Ensure the element exists before accessing its content
+        if (code) {
+            stat = 1;
+            codelist.push(code.innerHTML);
+        }
+        i++;
+    }
 }
+
 
 function check(input){
 	var i = 0;
