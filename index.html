@@ -11,22 +11,16 @@
 	<!--script type="text/javascript"
 		src="MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 	</script-->
-<script type="text/javascript">
-    MathJax = {
-        loader: { load: ['output/chtml'] }, // Load CommonHTML output
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        },
-        options: {
-            renderActions: {
-                addMenu: [] // Disable MathJax's context menu
-            }
-        }
-    };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            loader: { load: ['output/chtml'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script>
 	function preview()
 		{
