@@ -11,34 +11,25 @@
 	<!--script type="text/javascript"
 		src="MathJax-2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 	</script-->
-	<script type="text/javascript" 
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
+	<script type="text/javascript">
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']], // Custom inline delimiters
+            displayMath: [['$$', '$$'], ['\\[', '\\]']] // Custom display delimiters
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+</script>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 	<script type="text/javascript"
 		src="jquery.min.js">
 	</script>
 	<script src="API.js"></script>
-	<script type="text/javascript">
-		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})
-		function preview()
-		{
-			var key = event.keyCode;
-			if((key >= 37 && key <= 40)||(key >=112 && key <= 123)||(key >=91 && key <=93)||(key >=16 &&key <=20)){
-				return;
-			}
-			var checked = document.getElementById('preview').checked;
-			if(checked)run(0);
-			else
-				run(1);
-		}
-		function print(flag)
-		{
-			var input = document.getElementById('output').innerHTML;
-			//var input = compile(document.getElementById('wmd-input').value);
-			if(flag == 0)print_page(input);
-			if(flag == 1)gethtmlcode(input);
-		}
-	</script>
 	</head>
 	<body>
 	<center><b>This is test page</b></center>
